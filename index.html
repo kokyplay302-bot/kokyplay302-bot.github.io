@@ -17,7 +17,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column; /* لترتيب النص والزر رأسياً */
+      flex-direction: column;
     }
 
     h1 {
@@ -25,7 +25,7 @@
       z-index: 2;
       font-size: 40px;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-      margin-bottom: 60px; /* مساحة كافية للزر */
+      margin-bottom: 60px;
     }
 
     .stars {
@@ -73,56 +73,26 @@
       }
     }
 
-    /* ✅ زر الدائرة مع المثلث */
-    .button-container {
-      position: relative;
-      width: 80px;  /* عرض الدائرة */
-      height: 140px; /* مساحة كافية للمثلث */
+    /* ✅ زر Press Here */
+    .press-btn {
+      background: transparent;       /* خلفية مثل خلفية الصفحة */
+      border: 2px solid red;         /* حواف حمراء */
+      border-radius: 12px;           /* حواف دائرية */
+      color: saddlebrown;            /* لون النص بني غامق */
+      padding: 14px 40px;
+      font-size: 22px;
+      font-weight: bold;
       cursor: pointer;
       z-index: 2;
-    }
-
-    /* مثلث متساوي الساقين */
-    .triangle {
-      position: absolute;
-      bottom: 80px; /* أعلى الدائرة مباشرة */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 0;
-      border-left: 20px solid transparent;   /* نصف قاعدة صغيرة */
-      border-right: 20px solid transparent;  /* نصف قاعدة صغيرة */
-      border-bottom: 100px solid #00aaff;    /* ضلعان طويلان */
-      filter: drop-shadow(0 0 10px #00aaff);
-    }
-
-    /* الدائرة نفسها هي الزر */
-    .circle-btn {
-      width: 80px;
-      height: 80px;
-      background: #00aaff;
-      border-radius: 50%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: black;
-      font-weight: bold;
-      box-shadow: 0 0 15px #00aaff;
-      border: none;
-      font-size: 18px;
       transition: 0.3s;
     }
 
-    .circle-btn:hover {
-      background: #00ddff;
-      box-shadow: 0 0 25px #00ddff;
+    .press-btn:hover {
+      background: rgba(255,0,0,0.1); /* لمسة خفيفة عند المرور */
       transform: scale(1.05);
     }
 
-    .circle-btn:active {
+    .press-btn:active {
       transform: scale(0.95);
     }
   </style>
@@ -144,11 +114,25 @@
   <div class="rocket"></div>
   <h1>عفوا، لا يوجد شيء هنا 🚀</h1>
 
-  <!-- ✅ الزر الجديد -->
-  <div class="button-container">
-    <div class="triangle"></div>
-    <button class="circle-btn" onclick="alert('تم الضغط على الزر!')">زر</button>
-  </div>
+  <!-- ✅ زر الإعلان -->
+  <button class="press-btn" onclick="showAd()">Press Here</button>
+
+  <script>
+    function showAd() {
+      // كود الإعلان يشتغل عند النقر فقط
+      var uid = '494962';
+      var wid = '745804';
+      var pop_fback = 'up';
+      var pop_tag = document.createElement('script');
+      pop_tag.src = '//cdn.popcash.net/show.js';
+      document.body.appendChild(pop_tag);
+      pop_tag.onerror = function() {
+        pop_tag = document.createElement('script');
+        pop_tag.src = '//cdn2.popcash.net/show.js';
+        document.body.appendChild(pop_tag);
+      };
+    }
+  </script>
 
 </body>
 </html>
