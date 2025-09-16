@@ -2,125 +2,88 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>صفحة فضائية متحركة</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo+Play&display=swap" rel="stylesheet">
+  <title>صفحة إعلانات موزعة</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      overflow: hidden;
-      font-family: 'Cairo Play', sans-serif;
+      background: #000;
       height: 100vh;
-      background: black;
-      color: #00aaff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-
-    h1 {
-      position: relative;
-      z-index: 2;
-      font-size: 40px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-      margin-bottom: 60px;
-    }
-
-    .stars {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: transparent;
-      overflow: hidden;
-      z-index: 1;
-    }
-
-    .star {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background: white;
-      animation: twinkle 2s infinite ease-in-out;
-    }
-
-    @keyframes twinkle {
-      0%, 100% { opacity: 0.2; }
-      50% { opacity: 1; }
-    }
-
-    .rocket {
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      background-image: url('https://cdn-icons-png.flaticon.com/512/3214/3214603.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      animation: fly 8s linear infinite;
-    }
-
-    @keyframes fly {
-      0% {
-        top: 100%;
-        left: -50px;
-        transform: rotate(45deg);
-      }
-      100% {
-        top: -100px;
-        left: 110%;
-        transform: rotate(45deg);
-      }
-    }
-
-    /* زر Press Here */
-    .press-btn {
-      background: transparent;
-      border: 2px solid red;
-      border-radius: 12px;
-      color: saddlebrown;
-      padding: 14px 40px;
-      font-size: 22px;
-      font-weight: bold;
-      cursor: pointer;
-      z-index: 2;
-      transition: 0.3s;
-    }
-
-    .press-btn:hover {
-      background: rgba(255,0,0,0.1);
-      transform: scale(1.05);
-    }
-
-    .press-btn:active {
-      transform: scale(0.95);
+      font-family: sans-serif;
     }
   </style>
-</head>
-<body>
-  <div class="stars">
+
+  <!-- إعلان أعلى يسار -->
+  <div style="position: fixed; top: 10px; left: 10px; z-index: 999;">
+    <script src="https://fenoofaussut.net/act/files/tag.min.js?z=9884915" data-cfasync="false" async></script>
+  </div>
+
+  <!-- إعلان أعلى يمين -->
+  <div style="position: fixed; top: 10px; right: 10px; z-index: 999;">
+    <script src="https://upskittyan.com/act/files/tag.min.js?z=9884890" data-cfasync="false" async></script>
+  </div>
+
+  <!-- إعلان فوق اللي تحت شمال -->
+  <div style="position: fixed; bottom: 60px; left: 10px; z-index: 999;">
     <script>
-      for (let i = 0; i < 100; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        star.style.top = Math.random() * 100 + '%';
-        star.style.left = Math.random() * 100 + '%';
-        document.querySelector('.stars').appendChild(star);
-      }
+      (function(s){
+        s.dataset.zone='9884947';
+        s.src='https://gizokraijaw.net/vignette.min.js';
+      })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
     </script>
   </div>
 
-  <div class="rocket"></div>
-  <h1>عفوا، لا يوجد شيء هنا 🚀</h1>
+  <!-- إعلان فوق اللي تحت يمين -->
+  <div style="position: fixed; bottom: 60px; right: 10px; z-index: 999;">
+    <script>
+      (function(s){
+        s.dataset.zone='9884940';
+        s.src='https://gizokraijaw.net/vignette.min.js';
+      })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
+    </script>
+  </div>
 
-  <!-- زر الإعلان -->
-  <button class="press-btn" onclick="openAd()">Press Here</button>
+  <!-- إعلان تحت شمال -->
+  <div style="position: fixed; bottom: 10px; left: 10px; z-index: 999;">
+    <script src="https://gizokraijaw.net/vignette.min.js?z=9884925" data-cfasync="false" async></script>
+  </div>
 
-  <script>
-    function openAd() {
-      // فتح الرابط في نافذة أو تبويب جديد
-      window.open("https://otieu.com/4/9878416", "_blank");
-    }
-  </script>
+  <!-- إعلان تحت يمين -->
+  <div style="position: fixed; bottom: 10px; right: 10px; z-index: 999;">
+    <script src="https://upskittyan.com/act/files/tag.min.js?z=9884919" data-cfasync="false" async></script>
+  </div>
 
+  <!-- إعلان تحت اللي فوق شمال -->
+  <div style="position: fixed; bottom: 20px; left: 10px; z-index: 998;">
+    <script src="https://gizokraijaw.net/vignette.min.js?z=9884947" data-cfasync="false" async></script>
+  </div>
+
+  <!-- إعلان تحت اللي فوق يمين -->
+  <div style="position: fixed; bottom: 20px; right: 10px; z-index: 998;">
+    <script src="https://fenoofaussut.net/act/files/tag.min.js?z=9884943" data-cfasync="false" async></script>
+  </div>
+
+  <!-- إعلان فوق الاتنين اللي تحت شمال -->
+  <div style="position: fixed; bottom: 60px; left: 10px; z-index: 999;">
+    <script src="https://fenoofaussut.net/act/files/tag.min.js?z=9884994" data-cfasync="false" async></script>
+  </div>
+
+  <!-- إعلان فوق الاتنين اللي تحت يمين -->
+  <div style="position: fixed; bottom: 60px; right: 10px; z-index: 999;">
+    <script src="https://eechicha.com/act/files/tag.min.js?z=9884992" data-cfasync="false" async></script>
+  </div>
+
+  <!-- إعلان منتصف أعلى الصفحة -->
+  <div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index: 999;">
+    <script src="https://staupsoaksy.net/act/files/tag.min.js?z=9884959" data-cfasync="false" async></script>
+  </div>
+
+  <!-- إعلان منتصف أسفل الصفحة -->
+  <div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); z-index: 999;">
+    <script src="https://vaugroar.com/act/files/tag.min.js?z=9884975" data-cfasync="false" async></script>
+  </div>
+
+</head>
+<body>
 </body>
 </html>
