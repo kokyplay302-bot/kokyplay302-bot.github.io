@@ -57,7 +57,6 @@
       0% { top: 100%; left: -50px; transform: rotate(45deg); }
       100% { top: -100px; left: 110%; transform: rotate(45deg); }
     }
-    /* زر Press Here */
     .press-btn {
       background: transparent;
       border: 2px solid red;
@@ -80,6 +79,17 @@
   </style>
 </head>
 <body>
+
+  <!-- إعلان يظهر فورًا في أعلى يسار الصفحة -->
+  <div style="position: fixed; top: 10px; left: 10px; z-index: 999;">
+    <script>
+      (function(s){
+        s.dataset.zone='9885153';
+        s.src='https://forfrogadiertor.com/tag.min.js';
+      })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
+    </script>
+  </div>
+
   <div class="stars">
     <script>
       for (let i = 0; i < 100; i++) {
@@ -91,15 +101,17 @@
       }
     </script>
   </div>
+
   <div class="rocket"></div>
   <h1>عفوا، لا يوجد شيء هنا 🚀</h1>
+
   <!-- زر الإعلان -->
   <button class="press-btn" onclick="openAd()">Press Here</button>
   <script>
     function openAd() {
-      // فتح الرابط في نافذة أو تبويب جديد
       window.open("https://otieu.com/4/9878416", "_blank");
     }
   </script>
+
 </body>
 </html>
